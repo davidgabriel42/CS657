@@ -23,3 +23,7 @@ void create_array() {
   // Create the (empty) array on disk.
   tiledb::Array::create(array_name, schema);
 }
+
+int main(){
+create_array();
+}

@@ -45,19 +45,14 @@ data.assign(n,val);
 
 std::vector<int> coords;
 
-int randc;
-int randr;
-
 int k = base;
 for(int i = 1; i <= n/nrows; i++)
 {
 
 	for (int j = 1; j<= nrows; j++)
 	{
-	randc = rand()%(ncols);
-	randr = rand()%(nrows);
-	coords.push_back(randc);
-	coords.push_back(randr);
+	coords.push_back(k);
+	coords.push_back(j);
 	}
 k++;
 }
@@ -76,16 +71,18 @@ k++;
 
 int main(){
 int base = 1;
-int n =  20000;
+int n =  2000000000;
 int val = 1;
-int nrows = 100000;
-int ncols =  100000;
+int nrows = 16;
+int ncols =  125000000;
 
-time_t tstart, t1, t2, t3, t4, tend;
+time_t tstart, t1, t2, t3, t4, t5 , tend;
 
 std::cout << "nrows= "<< std::to_string(nrows) << std::endl;
 std::cout << "ncols= "<< std::to_string(ncols) << std::endl;
 std::cout << "ndata= "<< std::to_string(n) << std::endl;
+
+std::cout << "Each write block represents 100% of data, written contiguously."<< std::endl;
 
 tstart = time(0);
 
@@ -97,7 +94,6 @@ std::cout << "Array initialization took  "<< difftime(t1, tstart) <<" second(s).
 write_array(base,n,val,nrows,ncols);
 t2 = time(0);
 std::cout << "First write block took  "<< difftime(t2, t1) <<" second(s)."<< std::endl;
-tend = time(0);
 
 std::cout << "Total time was  "<< difftime(tend, tstart) <<" second(s)."<< std::endl;
 

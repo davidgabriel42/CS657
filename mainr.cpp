@@ -54,10 +54,10 @@ for(int i = 1; i <= n/nrows; i++)
 
 	for (int j = 1; j<= nrows; j++)
 	{
-	randc = rand() % ncols;
-	randr = rand % nrows;
-	coords.push_back(randr);
+	randc = rand()%(ncols);
+	randr = rand()%(nrows);
 	coords.push_back(randc);
+	coords.push_back(randr);
 	}
 k++;
 }
@@ -76,10 +76,10 @@ k++;
 
 int main(){
 int base = 1;
-int n =  20000000;
+int n =  20000;
 int val = 1;
-int nrows = 16;
-int ncols =  1250000;
+int nrows = 100000;
+int ncols =  100000;
 
 time_t tstart, t1, t2, t3, t4, tend;
 

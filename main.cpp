@@ -76,11 +76,13 @@ int val = 1;
 int nrows = 16;
 int ncols =  125000000;
 
-time_t tstart, t1, t2, t3, t4, tend;
+time_t tstart, t1, t2, t3, t4, t5 , tend;
 
 std::cout << "nrows= "<< std::to_string(nrows) << std::endl;
 std::cout << "ncols= "<< std::to_string(ncols) << std::endl;
 std::cout << "ndata= "<< std::to_string(n) << std::endl;
+
+std::cout << "Each write block represents 10% of data, written contiguously."<< std::endl;
 
 tstart = time(0);
 
@@ -94,24 +96,28 @@ t2 = time(0);
 std::cout << "First write block took  "<< difftime(t2, t1) <<" second(s)."<< std::endl;
 
 base += n;
-n += n;
 write_array(base,n,val,nrows,ncols);
 t3 = time(0);
 std::cout << "Second write block took "<< difftime(t3, t2) <<" second(s)."<< std::endl;
 
 
 base += n;
-n += n;
 write_array(base,n,val,nrows,ncols);
 t4 = time(0);
 std::cout << "Third write block took "<< difftime(t4, t3) <<" second(s)."<< std::endl;
 
 base += n;
-n += n;
+write_array(base,n,val,nrows,ncols);
+t5 = time(0);
+
+std::cout << "Fourth write block took "<< difftime(t5, t4) <<" second(s)."<< std::endl;
+
+base += n;
 write_array(base,n,val,nrows,ncols);
 tend = time(0);
 
-std::cout << "Fourth write block took "<< difftime(tend, t4) <<" second(s)."<< std::endl;
+std::cout << "Fifth write block took "<< difftime(t5, t4) <<" second(s)."<< std::endl;
+
 std::cout << "Total time was  "<< difftime(tend, tstart) <<" second(s)."<< std::endl;
 
 }

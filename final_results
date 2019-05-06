@@ -1,0 +1,33 @@
+first 10% and 50%
+
+nrows= 16
+ncols= 125000000
+ndata= 20000000
+Each write block represents 10% of data, written contiguously.
+Array initialization took  0 second(s).
+First write block took  13 second(s).
+Second write block took 14 second(s).
+Third write block took 13 second(s).
+Fourth write block took 14 second(s).
+Fifth write block took 14 second(s).
+Total time was  68 second(s).
+
+array 4
+
+nrows= 16
+ncols= 125000000
+ndata= 20000000
+Array initialization took  1 second(s).
+First write block took  13 second(s).
+Total time Array 4 was  14 second(s).
+
+nrows= 16
+ncols= 125000000
+ndata= 5000000
+Evenly distributed 'random' block write in second(s).
+Array initialization took  0 second(s).
+First write block took  3 second(s).
+Second write block took 4 second(s).
+Third write block took 3 second(s).
+Fourth write block took 3 second(s).
+Total time Array 5 was  13 second(s).

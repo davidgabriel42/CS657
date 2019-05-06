@@ -1,2 +1,7 @@
-g++ -std=c++11 main.cpp -o example      -I/home/dave/anaconda2/pkgs/tiledb-1.5.0-hcb9bd75_2/include      -L/home/dave/anaconda2/pkgs/tiledb-1.5.0-hcb9bd75_2/lib      -Wl,-rpath,/home/dave/anaconda2/pkgs/tiledb-1.5.0-hcb9bd75_2/lib      -ltiledb
+g++ -std=c++11 main1.cpp -o example      \
+-I/home/dave/anaconda2/pkgs/tiledb-1.5.0-hcb9bd75_2/include      \
+-L/home/dave/anaconda2/pkgs/tiledb-1.5.0-hcb9bd75_2/lib      \
+-Wl,-rpath,/home/dave/anaconda2/pkgs/tiledb-1.5.0-hcb9bd75_2/lib      \
+-ltiledb
+
 

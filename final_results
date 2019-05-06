@@ -31,3 +31,24 @@ Second write block took 4 second(s).
 Third write block took 3 second(s).
 Fourth write block took 3 second(s).
 Total time Array 5 was  13 second(s).
+
+
+really good data
+
+nrows= 16
+ncols= 125000000
+ndata= 20000000
+Each write block represents 10% of data, written contiguously.
+Array initialization took  0 second(s).
+First write block took  13 second(s).
+Second write block took 13 second(s).
+Third write block took 14 second(s).
+Fourth write block took 13 second(s).
+Fifth write block took 14 second(s).
+Sixth write block took 13 second(s).
+Seventh write block took 14 second(s).
+Eigth write block took 13 second(s).
+Ninth write block took 14 second(s).
+Tenth write block took 13 second(s).
+Total time was  134 second(s).
+

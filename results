@@ -1,0 +1,52 @@
+nrows= 16
+ncols= 125000000
+ndata= 20000000
+Array initialization took  0 second(s).
+First write block took  14 second(s).
+Second write block took27 second(s).
+It took 41 second(s).
+
+
+nrows= 16
+ncols= 125000000
+ndata= 20000000
+Array initialization took  0 second(s).
+First write block took  14 second(s).
+Second write block took 26 second(s).
+Third write block took 53 second(s).
+Killed
+
+nrows= 16
+ncols= 125000
+ndata= 2000000
+Array initialization took  0 second(s).
+First write block took  1 second(s).
+Total time was  1 second(s).
+
+=====
+
+nrows= 16
+ncols= 125000
+ndata= 2000000
+Array initialization took  0 second(s).
+First write block took  1 second(s).
+Total time was  1 second(s).
+dave@node-0:~/Documents/CS657/bonus$ nano results
+dave@node-0:~/Documents/CS657/bonus$ rm -rf quickstart_sparse_array/
+dave@node-0:~/Documents/CS657/bonus$ g++ -std=c++11 main1.cpp -o example      -I/home/dave/anaconda2/pkgs/tiledb-1.5.0-hcb9bd75_2/include      -L/home/dave/anaconda2/pkgs/tiledb-1.5.0-hcb9bd75_2/lib      -Wl,-rpath,/home/dave/anaconda2/pkgs/tiledb-1.5.0-hcb9bd75_2/lib      -ltiledb
+dave@node-0:~/Documents/CS657/bonus$ ./example 
+nrows= 16
+ncols= 12500000
+ndata= 200000000
+Array initialization took  1 second(s).
+Killed
+dave@node-0:~/Documents/CS657/bonus$ rm -rf quickstart_sparse_array/
+dave@node-0:~/Documents/CS657/bonus$ g++ -std=c++11 main1.cpp -o example      -I/home/dave/anaconda2/pkgs/tiledb-1.5.0-hcb9bd75_2/include      -L/home/dave/anaconda2/pkgs/tiledb-1.5.0-hcb9bd75_2/lib      -Wl,-rpath,/home/dave/anaconda2/pkgs/tiledb-1.5.0-hcb9bd75_2/lib      -ltiledb
+dave@node-0:~/Documents/CS657/bonus$ ./example 
+nrows= 16
+ncols= 1250000
+ndata= 20000000
+Array initialization took  1 second(s).
+First write block took  13 second(s).
+Total time was  14 second(s).
+
